@@ -1,0 +1,63 @@
+@use "sass:list";
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+$itemColor1: hsl(31, 77%, 52%);
+$itemColor2: hsl(184, 100%, 22%);
+$itemColor3: hsl(179, 100%, 13%);
+$itemCorner1: 0.5rem 0.5rem 0 0;
+$itemCorner2: 0;
+$itemCorner3: 0 0  0.5rem 0.5rem;
+$colors: $itemColor1, $itemColor2, $itemColor3;
+$corners: $itemCorner1, $itemCorner2, $itemCorner3;
+$gridItem: gridItem;
+
+.container {
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+  color: rgba(255,255,255,0.9);
+  display: grid;
+  grid-template-columns: 86vw;
+  justify-content: center;
+
+  div {
+    margin: 3.2rem 3.33rem;
+  }
+
+  h1 {
+    font-family: "Big Shoulders Display";
+    font-size: 2.7rem;
+  }
+
+  p {
+
+    line-height: 1.6rem;
+  }
+
+  button {
+    height: 3.2rem;
+    width: 9.73rem;
+    border-radius: 1.6rem;
+    border: 2px solid white;
+    margin-top: 0.9rem;
+    background-color: white;
+  }
+
+}
+
+@for $i from 1 through 3 {
+  .#{$gridItem}#{$i} {
+    background-color: list.nth($colors, $i);
+    border-radius: list.nth($corners, $i);
+  }
+
+  .#{$gridItem}#{$i} button {
+    color: list.nth($colors, $i);
+
+    &:hover {
+      background-color: list.nth($colors, $i);
+      color: white;
+      cursor: pointer;
+    }
+  }
+  
+}

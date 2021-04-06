@@ -1,9 +1,10 @@
 import Head from 'next/head'
+import styles from '../styles/Home.module.scss'
 
 export default function Home() {
   return (
-    <div className={"container"}>
-      <section className={"gridItem1"}>
+    <div className={styles.container}>
+      <section className={styles.gridItem1}>
         <div>
           <img src={"/icon-sedans.svg"}/>
           <h1>SEDANS</h1>
@@ -11,7 +12,7 @@ export default function Home() {
           <button>Learn More</button>
         </div>
       </section>
-      <section className={"gridItem2"}>
+      <section className={styles.gridItem2}>
         <div>
           <img src={"/icon-suvs.svg"}/>
           <h1>SUVS</h1>
@@ -19,7 +20,7 @@ export default function Home() {
           <button>Learn More</button>
         </div>
       </section>
-      <section className={"gridItem3"}>
+      <section className={styles.gridItem3}>
         <div>
           <img src={"/icon-luxury.svg"}/>
           <h1>LUXURY</h1>
