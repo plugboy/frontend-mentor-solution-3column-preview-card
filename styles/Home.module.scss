@@ -7,8 +7,12 @@ $itemColor3: hsl(179, 100%, 13%);
 $itemCorner1: 0.5rem 0.5rem 0 0;
 $itemCorner2: 0;
 $itemCorner3: 0 0  0.5rem 0.5rem;
+$itemCornerDesktop1: 0.5rem 0 0 0.5rem;
+$itemCornerDesktop2: 0;
+$itemCornerDesktop3: 0 0.5rem 0.5rem 0;
 $colors: $itemColor1, $itemColor2, $itemColor3;
 $corners: $itemCorner1, $itemCorner2, $itemCorner3;
+$cornersDesktop: $itemCornerDesktop1, $itemCornerDesktop2, $itemCornerDesktop3;
 $gridItem: gridItem;
 $breakpoint-mobile: 375px;
 
@@ -33,7 +37,7 @@ $horMargin: 17vw;
     padding: 3.4rem 3.4rem;
     height: 100%;
     display: grid;
-    grid-template-rows: 40px auto auto 1fr;
+    grid-template-rows: 40px 7.1rem auto 1fr;
     align-content: start;
   } 
 
@@ -61,7 +65,12 @@ $horMargin: 17vw;
 @for $i from 1 through 3 {
   .#{$gridItem}#{$i} {
     background-color: list.nth($colors, $i);
-    border-radius: list.nth($corners, $i);
+    border-radius: list.nth($cornersDesktop, $i);
+
+    @media screen and (max-width: 700px) {
+      border-radius: list.nth($corners, $i);
+    }
+
   }
 
   .#{$gridItem}#{$i} button {
