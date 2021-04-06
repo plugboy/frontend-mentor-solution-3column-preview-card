@@ -20,13 +20,22 @@ $horMargin: 17vw;
   color: rgba(255,255,255,0.9);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: minmax(500px, calc(100vh - #{$verMargin * 2})) ;
+  grid-template-rows: minmax(480px, calc(100vh - #{$verMargin * 2})) ;
   justify-content: center;
-  align-content: stretch;
+
+  @media screen and (max-width: 700px) {
+    grid-template-columns: clamp(300px, 90vw, 100vw);
+    grid-template-rows: repeat(3, 1fr);
+    margin: #{$verMargin / 2.0} $horMargin;
+  }
 
   div {
-    margin: 3.2rem 3.4rem;
-  }
+    padding: 3.4rem 3.4rem;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 40px auto auto 1fr;
+    align-content: start;
+  } 
 
   h1 {
     font-family: "Big Shoulders Display";
@@ -34,8 +43,8 @@ $horMargin: 17vw;
   }
 
   p {
-
-    line-height: 1.6rem;
+    line-height: 1.8rem;
+    margin-top: 0;
   }
 
   button {
@@ -45,7 +54,7 @@ $horMargin: 17vw;
     border: 2px solid white;
     margin-top: 0.9rem;
     background-color: white;
-
+    align-self: end;
   }
 }
 
