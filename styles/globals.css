@@ -1,16 +1,67 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
 
 * {
-  box-sizing: border-box;
+  color: rgba(255,255,255,0.9);
+  font-size: 15px;
+  font-family: "Lexend Deca";
+  --item1Color: hsl(31, 77%, 52%);
+  --item2Color: hsl(184, 100%, 22%);
+  --item3Color: hsl(179, 100%, 13%);
 }
+
+button {
+  height: 3.2rem;
+  width: 9.73rem;
+  border-radius: 1.6rem;
+  border: none;
+  margin-top: 0.9rem;
+}
+
+h1 {
+  font-family: "Big Shoulders Display";
+  font-size: 2.7rem;
+}
+
+p {
+  line-height: 1.6rem;
+}
+
+.container {
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+  display: grid;
+  grid-template-columns: 86vw;
+  justify-content: center;
+}
+
+[class^="gridItem"] div {
+  margin: 3.2rem 3.33rem;
+}
+
+.gridItem1 {
+  background-color: var(--item1Color);
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.gridItem1 button {
+  color: var(--item1Color);
+}
+
+.gridItem2 {
+  background-color: var(--item2Color);
+}
+
+.gridItem2 button {
+  color: var(--item2Color);
+}
+
+.gridItem3 {
+  background-color: var(--item3Color);
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.gridItem3 button {
+  color: var(--item3Color);
+}
+
+
