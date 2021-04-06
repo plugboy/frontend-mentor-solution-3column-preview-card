@@ -14,8 +14,7 @@ $colors: $itemColor1, $itemColor2, $itemColor3;
 $corners: $itemCorner1, $itemCorner2, $itemCorner3;
 $cornersDesktop: $itemCornerDesktop1, $itemCornerDesktop2, $itemCornerDesktop3;
 $gridItem: gridItem;
-$breakpoint-mobile: 375px;
-
+$breakpoint: 700px;
 $verMargin: 18vh;
 $horMargin: 17vw;
 
@@ -27,7 +26,7 @@ $horMargin: 17vw;
   grid-template-rows: minmax(480px, calc(100vh - #{$verMargin * 2})) ;
   justify-content: center;
 
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: $breakpoint) {
     grid-template-columns: clamp(300px, 90vw, 100vw);
     grid-template-rows: repeat(3, 1fr);
     margin: #{$verMargin / 2.0} $horMargin;
@@ -67,7 +66,7 @@ $horMargin: 17vw;
     background-color: list.nth($colors, $i);
     border-radius: list.nth($cornersDesktop, $i);
 
-    @media screen and (max-width: 700px) {
+    @media screen and (max-width: $breakpoint) {
       border-radius: list.nth($corners, $i);
     }
 
