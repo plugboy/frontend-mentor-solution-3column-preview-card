@@ -10,17 +10,22 @@ $itemCorner3: 0 0  0.5rem 0.5rem;
 $colors: $itemColor1, $itemColor2, $itemColor3;
 $corners: $itemCorner1, $itemCorner2, $itemCorner3;
 $gridItem: gridItem;
+$breakpoint-mobile: 375px;
+
+$verMargin: 18vh;
+$horMargin: 17vw;
 
 .container {
-  margin-top: 6rem;
-  margin-bottom: 6rem;
+  margin: $verMargin $horMargin;
   color: rgba(255,255,255,0.9);
   display: grid;
-  grid-template-columns: 86vw;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: minmax(500px, calc(100vh - #{$verMargin * 2})) ;
   justify-content: center;
+  align-content: stretch;
 
   div {
-    margin: 3.2rem 3.33rem;
+    margin: 3.2rem 3.4rem;
   }
 
   h1 {
@@ -40,8 +45,8 @@ $gridItem: gridItem;
     border: 2px solid white;
     margin-top: 0.9rem;
     background-color: white;
-  }
 
+  }
 }
 
 @for $i from 1 through 3 {

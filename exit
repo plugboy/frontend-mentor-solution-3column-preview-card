@@ -1,0 +1,17 @@
+[33mcommit b8ec9f86145207699dc101166fa6c976bd5cbeec[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: Ho Chung Law (Center) <centerlaw@gmail.com>
+Date:   Tue Apr 6 10:48:03 2021 -0700
+
+    refactored using scss and implemented hover states
+
+[33mcommit 4a002b96514301611d4852b987b013b0e6311752[m
+Author: Ho Chung Law (Center) <centerlaw@gmail.com>
+Date:   Tue Apr 6 01:51:27 2021 -0700
+
+    mobile done
+
+[33mcommit 27fc957a0838da6ec42396578bd1f21e6dab7e80[m
+Author: Ho Chung Law (Center) <centerlaw@gmail.com>
+Date:   Mon Apr 5 22:34:47 2021 -0700
+
+    Initial commit from Create Next App
