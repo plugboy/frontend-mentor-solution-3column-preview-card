@@ -27,9 +27,9 @@ export default function Home() {
   return (
     <div className={styles.container}>
       {cars.map(car => (
-        <section className={styles["gridItem" + car.id]}>
+        <section className={styles["gridItem" + car.id]} key={car.id}>
           <div>
-            <img src={car.image}/>
+            <img src={car.image} alt={"Car icon"}/>
             <h1>{car.title}</h1>
             <p>{car.description}</p>
             <button>Learn More</button>
