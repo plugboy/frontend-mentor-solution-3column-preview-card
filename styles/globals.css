@@ -3,3 +3,7 @@
   font-family: "Lexend Deca"; 
   box-sizing: border-box;
 }
+
+body {
+  margin: 0;
+}
