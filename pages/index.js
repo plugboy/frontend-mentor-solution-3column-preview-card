@@ -25,17 +25,23 @@ export default function Home() {
   ];
 
   return (
-    <div className={styles.container}>
-      {cars.map(car => (
-        <section className={styles["gridItem" + car.id]} key={car.id}>
-          <div>
-            <img src={car.image} alt={"Car icon"}/>
-            <h1>{car.title}</h1>
-            <p>{car.description}</p>
-            <button>Learn More</button>
-          </div>
-        </section>
-      ))}
-    </div>   
+    <>
+      <Head>
+        <title>3Column Preview Card</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
+      <div className={styles.container}>
+        {cars.map(car => (
+          <section className={styles["gridItem" + car.id]} key={car.id}>
+            <div>
+              <img src={car.image} alt={"Car icon"}/>
+              <h1>{car.title}</h1>
+              <p>{car.description}</p>
+              <button>Learn More</button>
+            </div>
+          </section>
+        ))}
+      </div>   
+    </>
   )
 }
